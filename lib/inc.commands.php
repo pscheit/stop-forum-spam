@@ -108,7 +108,7 @@ $createCommand('query-email',
     
     $res = $stmt->fetchAll();
 
-    $json = new \Psc\JS\JsonConverter();
+    $json = new \Psc\JS\JSONConverter();
     $output->writeln($json->stringify($res));
     
     return 0;
