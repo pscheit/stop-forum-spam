@@ -19,20 +19,6 @@ $createCommand('import-emails',
     $arg('file', 'the zipFile to the downloaded E-Mail-Archive')
   ),
   function ($input, $output, $command) {
-    $zipFile = new File($input->getArgument('file'));
-    $zipFile->resolvePath();
-    
-    $zip = new \ZipArchive();
-    $zip->open($zipFile);
-    $zip->extractTo((string) $zipFile->getDirectory());
-    
-    $txtFile = clone $zipFile;
-    $txtFile->setExtension('txt');
-    
-    if (!$txtFile->exists()) {
-      throw $command->exitException('no .txt file was found in archive: '.$zipFile.' i tried to find: '.$txtFile);
-    }
-    
     $config = new Configuration();
     $connectionParams = array(
       'dbname' => 'stop-forum-spam',
@@ -54,11 +40,21 @@ $createCommand('import-emails',
       $sm->createTable($emails);
       $command->info('table emails created.');
     }
-    
-    
-    //$stmt = $conn->prepare($sql);
 
-    $conn->beginTransaction();
+    $zipFile = new File($input->getArgument('file'));
+    $zipFile->resolvePath();
+    
+    $zip = new \ZipArchive();
+    $zip->open($zipFile);
+    $zip->extractTo((string) $zipFile->getDirectory());
+    
+    $txtFile = clone $zipFile;
+    $txtFile->setExtension('txt');
+    
+    if (!$txtFile->exists()) {
+      throw $command->exitException('no .txt file was found in archive: '.$zipFile.' i tried to find: '.$txtFile);
+    }
+    
     $csvFile = new Keboola\Csv\CsvFile((string) $txtFile);
     $sql = "INSERT INTO emails VALUES\n ";
     $sqlFile = 'out.txt';
