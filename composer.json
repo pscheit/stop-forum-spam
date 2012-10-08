@@ -1,0 +1,25 @@
+{
+  "name": "webforge/stop-forum-spam",
+  "type": "library",
+  "description": "a little tool to incorporate the great data from http://www.stopforumspam.com/",
+  "keywords": ["anti-spam", "spam"],
+  "homepage": "http://github.com/webforge/stop-forum-spam",
+  "license": "MIT",
+  "authors": [
+    {"name": "Philipp Scheit", "email": "p.scheit@ps-webforge.com"}
+  ],
+  "require": {
+    "php": ">=5.3.2",
+    "ext-mbstring": "*",
+    "ext-zip": "*",
+  
+    "keboola/csv": "1.0.*",
+    "doctrine/orm": "2.3.*",
+    "pscheit/psc-cms": "dev-master",
+    "webforge/webforge": "dev-master",
+    "symfony/console": "2.1.*"
+  },
+  "autoload": {
+    "psr-0": {"StopForumSpam": ["lib/", "tests/"]}
+  }
+}
