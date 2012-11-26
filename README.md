@@ -11,6 +11,13 @@ That will help to stop spamming the stopforumspam API :)
   - refactor the db creation into own command
   - create cronjob-command to pull directly file from stopforumspam.com
   
+## Howto
+
+  - download a file like listed_email_90_all.zip from stop-forum-spam
+  - run php -f bin/cli.php update-emails path/to/listed_email_90_all.zip
+    (a lot of dots while processing the sql will be generated)
+  - use the out.sql (which is a text file with sql "INSERT INTO" statements) to insert into a "emails" table on your database
+  
 ## Resources
 
 all credits go to [stopforumspam.com](http://www.stopforumspam.com/)

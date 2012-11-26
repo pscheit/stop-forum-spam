@@ -57,7 +57,7 @@ $createCommand('import-emails',
     
     $csvFile = new Keboola\Csv\CsvFile((string) $txtFile);
     $sql = "INSERT INTO emails VALUES\n ";
-    $sqlFile = 'out.txt';
+    $sqlFile = 'out.sql';
     file_put_contents($sqlFile, '');
     
     foreach($csvFile as $key=>$row) {
@@ -73,12 +73,8 @@ $createCommand('import-emails',
       
       list($email,$count,$lastseen) = $row;
       
-      $sql .= sprintf("(%s, %s, %s),\n",
+      $sql .= sprintf("(%1$s, %2$s, %3$s) ON DUPLIKATEY KEY UPDATE email = %1$s, count = %2$s, lastseen = %3$s \n",
                       $conn->quote($email), $conn->quote($count, \PDO::PARAM_INT), $conn->quote($lastseen));
-      
-      //$stmt->bindValue('email', $row[0]);
-      //$stmt->bindValue('count', (int) $row[1]);
-      //$stmt->bindValue('lastseen', new \DateTime($row[2]), 'datetime');
     }
   },
   'Generiert das SQL fuer den Import der E-Mails und führt diesen aus'
