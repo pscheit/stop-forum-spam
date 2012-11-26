@@ -60,12 +60,15 @@ $createCommand('import-emails',
     $sqlFile = 'out.sql';
     file_put_contents($sqlFile, '');
     
+    
     foreach($csvFile as $key=>$row) {
       if ((($key+1) % 200) == 0) {
-        $sql = mb_substr($sql, 0, -2).";\n\n\n";
+        $sql = mb_substr($sql, 0, -2);
+        
+        $sql .= " ON DUPLIKATEY KEY UPDATE email = VALUES(email), count = VALUES(count), lastseen = VALUES(lastseen);\n\n\n";
         
         file_put_contents($sqlFile, $sql, FILE_APPEND);
-        print ".";
+        $output->write('.');
           
         $sql = '';
         $sql .= "INSERT INTO emails VALUES\n ";
@@ -73,9 +76,13 @@ $createCommand('import-emails',
       
       list($email,$count,$lastseen) = $row;
       
-      $sql .= sprintf('(%1$s, %2$s, %3$s) ON DUPLIKATEY KEY UPDATE email = %1$s, count = %2$s, lastseen = %3$s '."\n",
+      $sql .= sprintf("(%s, %s, %s),\n",
                       $conn->quote($email), $conn->quote($count, \PDO::PARAM_INT), $conn->quote($lastseen));
     }
+    
+    // flush last
+    file_put_contents($sqlFile, $sql, FILE_APPEND);
+    $output->writeln('finished writing sql file.');
   },
   'Generiert das SQL fuer den Import der E-Mails und führt diesen aus'
 );
