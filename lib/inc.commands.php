@@ -65,7 +65,7 @@ $createCommand('import-emails',
       if ((($key+1) % 200) == 0) {
         $sql = mb_substr($sql, 0, -2);
         
-        $sql .= " ON DUPLIKATEY KEY UPDATE email = VALUES(email), count = VALUES(count), lastseen = VALUES(lastseen);\n\n\n";
+        $sql .= " ON DUPLIKATE KEY UPDATE email = VALUES(email), count = VALUES(count), lastseen = VALUES(lastseen);\n\n\n";
         
         file_put_contents($sqlFile, $sql, FILE_APPEND);
         $output->write('.');
@@ -76,7 +76,7 @@ $createCommand('import-emails',
       
       list($email,$count,$lastseen) = $row;
       
-      $sql .= sprintf("(%s, %s, %s),\n",
+      $sql .= sprintf("(%s, %s, %s),q\n",
                       $conn->quote($email), $conn->quote($count, \PDO::PARAM_INT), $conn->quote($lastseen));
     }
     
