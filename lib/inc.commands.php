@@ -73,7 +73,7 @@ $createCommand('import-emails',
       
       list($email,$count,$lastseen) = $row;
       
-      $sql .= sprintf("(%1$s, %2$s, %3$s) ON DUPLIKATEY KEY UPDATE email = %1$s, count = %2$s, lastseen = %3$s \n",
+      $sql .= sprintf('(%1$s, %2$s, %3$s) ON DUPLIKATEY KEY UPDATE email = %1$s, count = %2$s, lastseen = %3$s '."\n",
                       $conn->quote($email), $conn->quote($count, \PDO::PARAM_INT), $conn->quote($lastseen));
     }
   },
