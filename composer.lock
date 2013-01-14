@@ -1,18 +1,69 @@
 {
-    "hash": "a82a2b77f01aae42d53f240eeef4c443",
+    "hash": "398599d6606ed79596820f3f2c29c44a",
     "packages": [
         {
-            "name": "doctrine/common",
-            "version": "2.3.0",
+            "name": "CodePlex/PHPExcel",
+            "version": "1.7.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/common",
-                "reference": "2.3.0"
+                "url": "https://github.com/markushausammann/PHPExcel",
+                "reference": "1.7.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/common/zipball/2.3.0",
-                "reference": "2.3.0",
+                "url": "https://github.com/markushausammann/PHPExcel/archive/1.7.8.zip",
+                "reference": "1.7.8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0",
+                "ext-xml": "*"
+            },
+            "time": "2012-11-21 10:55:52",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "PHPExcel": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Maarten Balliauw",
+                    "homepage": "http://blog.maartenballiauw.be"
+                },
+                {
+                    "name": "Mark Baker"
+                },
+                {
+                    "name": "Erit Tilt"
+                }
+            ],
+            "description": "PHPExcel - OpenXML - Create Excel2007 documents in PHP - Spreadsheet engine",
+            "homepage": "http://phpexcel.codeplex.com",
+            "keywords": [
+                "php",
+                "excel",
+                "spreadsheet",
+                "OpenXML"
+            ]
+        },
+        {
+            "name": "doctrine/common",
+            "version": "2.3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/common",
+                "reference": "bb0aebbf234db52df476a2b473d434745b34221c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/doctrine/common/archive/bb0aebbf234db52df476a2b473d434745b34221c.zip",
+                "reference": "bb0aebbf234db52df476a2b473d434745b34221c",
                 "shasum": ""
             },
             "require": {
@@ -31,6 +82,7 @@
                     "Doctrine\\Common": "lib/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -54,9 +106,9 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Johannes M. Schmitt",
+                    "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -72,23 +124,23 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.3.0",
+            "version": "2.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal",
-                "reference": "2.3.0"
+                "reference": "cb3ec49cb4401bd1c8be6ba9671f651802586eaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/dbal/zipball/2.3.0",
-                "reference": "2.3.0",
+                "url": "https://github.com/doctrine/dbal/archive/cb3ec49cb4401bd1c8be6ba9671f651802586eaf.zip",
+                "reference": "cb3ec49cb4401bd1c8be6ba9671f651802586eaf",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "doctrine/common": "2.3.*"
             },
-            "time": "2012-09-20 05:56:37",
+            "time": "2012-12-23 20:28:39",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -101,6 +153,7 @@
                     "Doctrine\\DBAL": "lib/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -135,28 +188,28 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "2.3.0",
+            "version": "2.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "git://github.com/doctrine/doctrine2.git",
-                "reference": "2.3.0"
+                "reference": "019094655b6606852a3e3231de93425d9913bac4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/doctrine2/zipball/2.3.0",
-                "reference": "2.3.0",
+                "url": "https://github.com/doctrine/doctrine2/archive/019094655b6606852a3e3231de93425d9913bac4.zip",
+                "reference": "019094655b6606852a3e3231de93425d9913bac4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "ext-pdo": "*",
-                "doctrine/dbal": "2.3.*",
-                "symfony/console": "2.*"
+                "symfony/console": "2.*",
+                "doctrine/dbal": "2.3.*"
             },
             "suggest": {
                 "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
             },
-            "time": "2012-09-20 06:03:34",
+            "time": "2012-12-24 10:18:12",
             "bin": [
                 "bin/doctrine",
                 "bin/doctrine.php"
@@ -173,6 +226,7 @@
                     "Doctrine\\ORM": "lib/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -204,20 +258,68 @@
             ]
         },
         {
-            "name": "keboola/csv",
-            "version": "1.0.5",
+            "name": "imagine/Imagine",
+            "version": "v0.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/keboola/php-csv",
-                "reference": "1.0.5"
+                "url": "https://github.com/avalanche123/Imagine",
+                "reference": "v0.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/keboola/php-csv/zipball/1.0.5",
-                "reference": "1.0.5",
+                "url": "https://github.com/avalanche123/Imagine/archive/v0.3.1.zip",
+                "reference": "v0.3.1",
                 "shasum": ""
             },
-            "time": "2012-10-04 02:26:40",
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "sami/sami": "dev-master"
+            },
+            "time": "2012-11-12 21:16:43",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Imagine": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bulat Shakirzyanov",
+                    "email": "mallluhuct@gmail.com",
+                    "homepage": "http://avalanche123.com"
+                }
+            ],
+            "description": "Image processing for PHP 5.3",
+            "homepage": "http://imagine.readthedocs.org/",
+            "keywords": [
+                "image manipulation",
+                "image processing",
+                "drawing",
+                "graphics"
+            ]
+        },
+        {
+            "name": "keboola/csv",
+            "version": "1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/keboola/php-csv",
+                "reference": "1.0.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/keboola/php-csv/archive/1.0.9.zip",
+                "reference": "1.0.9",
+                "shasum": ""
+            },
+            "time": "2012-11-21 10:29:07",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -225,8 +327,49 @@
                     "Keboola\\Csv": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "description": "Keboola CSV reader and writer",
             "homepage": "http://keboola.com"
+        },
+        {
+            "name": "nikic/php-parser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser",
+                "reference": "222c9612ab9c65551b7febd38cbb0fa685b0e0db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/nikic/PHP-Parser/archive/222c9612ab9c65551b7febd38cbb0fa685b0e0db.zip",
+                "reference": "222c9612ab9c65551b7febd38cbb0fa685b0e0db",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "time": "2012-12-21 12:28:35",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "PHPParser": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "php",
+                "parser"
+            ]
         },
         {
             "name": "pscheit/psc-cms",
@@ -234,27 +377,43 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pscheit/psc-cms",
-                "reference": "695bc79b93c56b896e856157c56fa39c111873a4"
+                "reference": "65b0692d9b2867cd4e70ad716baeb19c28b6aaf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/pscheit/psc-cms/zipball/695bc79b93c56b896e856157c56fa39c111873a4",
-                "reference": "695bc79b93c56b896e856157c56fa39c111873a4",
+                "url": "https://github.com/pscheit/psc-cms/archive/65b0692d9b2867cd4e70ad716baeb19c28b6aaf6.zip",
+                "reference": "65b0692d9b2867cd4e70ad716baeb19c28b6aaf6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "ext-mbstring": "*",
-                "symfony/console": "2.1.*",
-                "symfony/process": "2.1.*",
-                "webforge/testdata-repository": "dev-master",
-                "webforge/webforge": "dev-master"
+                "doctrine/orm": "2.3.*@stable",
+                "symfony/console": "2.1.*@stable",
+                "symfony/process": "2.1.*@stable",
+                "symfony/css-selector": "2.1.*@stable",
+                "symfony/http-foundation": "2.1.*@stable",
+                "imagine/imagine": "0.3.*",
+                "swiftmailer/swiftmailer": "4.1.*",
+                "codeplex/phpexcel": "1.7.8"
             },
-            "time": "1349538275",
+            "require-dev": {
+                "webforge/testdata-repository": "dev-master",
+                "doctrine/data-fixtures": "dev-master"
+            },
+            "time": "2012-12-30 17:58:13",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Psc": [
+                        "psc/class/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL"
+                "LGPL-2.1+"
             ],
             "authors": [
                 {
@@ -262,7 +421,7 @@
                     "email": "p.scheit@ps-webforge.com"
                 }
             ],
-            "description": "a content management framework. deprecated: see webforge",
+            "description": "a content management system ontop of webforge.",
             "homepage": "http://wiki.ps-webforge.com/psc-cms:start",
             "keywords": [
                 "framework",
@@ -271,36 +430,82 @@
             ]
         },
         {
+            "name": "swiftmailer/swiftmailer",
+            "version": "v4.1.8",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/swiftmailer/swiftmailer.git",
+                "reference": "v4.1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/swiftmailer/swiftmailer/zipball/v4.1.8",
+                "reference": "v4.1.8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "time": "2012-06-17 13:55:34",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Chris Corbyn"
+                }
+            ],
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "http://swiftmailer.org",
+            "keywords": [
+                "mail",
+                "mailer"
+            ]
+        },
+        {
             "name": "symfony/console",
-            "version": "v2.1.2",
+            "version": "2.1.x-dev",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console",
-                "reference": "v2.1.0-RC2"
+                "reference": "v2.1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Console/zipball/v2.1.0-RC2",
-                "reference": "v2.1.0-RC2",
+                "url": "https://github.com/symfony/Console/archive/v2.1.6.zip",
+                "reference": "v2.1.6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2012-08-22 13:48:41",
+            "time": "2012-12-13 17:42:00",
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1-dev"
-                }
-            },
             "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Console": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -318,36 +523,119 @@
             "homepage": "http://symfony.com"
         },
         {
-            "name": "symfony/process",
-            "version": "v2.1.2",
-            "target-dir": "Symfony/Component/Process",
+            "name": "symfony/css-selector",
+            "version": "2.1.x-dev",
+            "target-dir": "Symfony/Component/CssSelector",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Process",
-                "reference": "v2.1.2"
+                "url": "https://github.com/symfony/CssSelector",
+                "reference": "v2.1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Process/zipball/v2.1.2",
-                "reference": "v2.1.2",
+                "url": "https://github.com/symfony/CssSelector/archive/v2.1.6.zip",
+                "reference": "v2.1.6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "2012-09-18 22:37:29",
+            "time": "2012-12-11 10:33:11",
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1-dev"
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\CssSelector": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony CssSelector Component",
+            "homepage": "http://symfony.com"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "2.1.x-dev",
+            "target-dir": "Symfony/Component/HttpFoundation",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/HttpFoundation",
+                "reference": "v2.1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony/HttpFoundation/archive/v2.1.6.zip",
+                "reference": "v2.1.6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "2012-12-14 21:03:29",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\HttpFoundation": "",
+                    "SessionHandlerInterface": "Symfony/Component/HttpFoundation/Resources/stubs"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony HttpFoundation Component",
+            "homepage": "http://symfony.com"
+        },
+        {
+            "name": "symfony/process",
+            "version": "2.1.x-dev",
+            "target-dir": "Symfony/Component/Process",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Process",
+                "reference": "cbba493e324cc41b6f408513d74df999b5b6306e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony/Process/archive/cbba493e324cc41b6f408513d74df999b5b6306e.zip",
+                "reference": "cbba493e324cc41b6f408513d74df999b5b6306e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "2012-12-30 12:18:39",
+            "type": "library",
             "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Process": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -365,84 +653,43 @@
             "homepage": "http://symfony.com"
         },
         {
-            "name": "webforge/testdata-repository",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pscheit/webforge-testdata-repository.git",
-                "reference": "fb68629337e516491232f7e9056bde7b0a80b743"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/pscheit/webforge-testdata-repository/zipball/fb68629337e516491232f7e9056bde7b0a80b743",
-                "reference": "fb68629337e516491232f7e9056bde7b0a80b743",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "time": "1349365721",
-            "type": "library",
-            "installation-source": "source",
-            "autoload": {
-                "psr-0": {
-                    "Webforge": [
-                        "lib/",
-                        "tests/"
-                    ]
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Philipp Scheit",
-                    "email": "p.scheit@ps-webforge.com"
-                }
-            ],
-            "description": "A repository for data that you can use to fill your unit tests.",
-            "homepage": "http://github.com/pscheit/webforge-testdata-repository",
-            "keywords": [
-                "data",
-                "unit test",
-                "testdata"
-            ]
-        },
-        {
             "name": "webforge/webforge",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pscheit/webforge.git",
-                "reference": "49d9fef659b3187b6d0a9715405c79bfec692a7c"
+                "reference": "7740ebe756a3b53a71544cd6b2aa82bfe494b761"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/pscheit/webforge/zipball/49d9fef659b3187b6d0a9715405c79bfec692a7c",
-                "reference": "49d9fef659b3187b6d0a9715405c79bfec692a7c",
+                "url": "https://github.com/pscheit/webforge/archive/7740ebe756a3b53a71544cd6b2aa82bfe494b761.zip",
+                "reference": "7740ebe756a3b53a71544cd6b2aa82bfe494b761",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "ext-mbstring": "*",
-                "pscheit/psc-cms": "*",
-                "webforge/testdata-repository": "*@alpha"
+                "symfony/console": "2.1.*",
+                "pscheit/psc-cms": "dev-master",
+                "doctrine/orm": "2.3.*@stable",
+                "nikic/php-parser": "dev-master"
             },
             "require-dev": {
-                "webforge/testdata-repository": "@dev"
+                "webforge/testdata-repository": "dev-master",
+                "phpmd/phpmd": "1.4.0"
             },
-            "time": "1349260497",
+            "time": "2012-12-30 15:02:54",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Webforge": [
-                        "lib/",
-                        "tests/"
+                        "lib",
+                        "tests"
                     ]
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "LGPL"
             ],
@@ -465,7 +712,7 @@
     "aliases": [
 
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "pscheit/psc-cms": 20,
         "webforge/webforge": 20
